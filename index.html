@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="player-section">
+            <img class="profile-pic" src="images/player.png" alt="Player">
+            <div class="dice-container">
+                <img id="player-dice1" src="images/dice1.png" alt="Die">
+                <img id="player-dice2" src="images/dice1.png" alt="Die">
+            </div>
+            <div class="score-container">
+                <p>Player Score: <span id="player-score">0</span></p>
+            </div>
+        </div>
+        <div class="control-section">
+            <button id="roll-button">Roll Dice</button>
+            <button id="reset-button">Reset Game</button>
+            <p id="winner-message"></p>
+        </div>
+        <div class="cpu-section">
+            <img class="profile-pic" src="images/cpu.png" alt="CPU">
+            <div class="dice-container">
+                <img id="computer-dice1" src="images/dice1.png" alt="Die">
+                <img id="computer-dice2" src="images/dice1.png" alt="Die">
+            </div>
+            <div class="score-container">
+                <p>CPU Score: <span id="computer-score">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+// Variables
+$font-family: Helvetica, sans-serif;
+$background-color: #f9ed69;
+$text-color: #2c3e50;
+$section-background: #ffb6b9;
+$button-background: #ff6f61;
+$button-hover-background: #d9534f;
+
+// Global styles
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+
+// Sections
+.player-section, .cpu-section, .control-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $section-background;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 90%;
+  max-width: 400px;
+
+  @media (min-width: 768px) {
+    &.control-section {
+      width: 100%;
+      max-width: none;
+      flex-direction: row;
+    }
+
+    .control-section button {
+      margin: 10px 20px;
+    }
+  }
+}
+
+// Profile pictures
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+// Dice container
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  img {
+    width: 80px;
+    margin: 0 10px;
+  }
+}
+
+// Score container
+.score-container {
+  margin: 20px 0;
+}
+
+// Buttons
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: $button-background;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $button-hover-background;
+  }
+}
